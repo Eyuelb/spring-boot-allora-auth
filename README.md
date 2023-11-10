@@ -12,7 +12,7 @@ Build a Spring Boot Login and Registration example (Rest API) that supports JWT 
 ## Configure Spring Datasource, JPA, App properties
 Open `src/main/resources/application.properties`
 
-
+```
 - For PostgreSQL:
 ```
 spring.datasource.url= jdbc:postgresql://localhost:5432/testdb
@@ -24,23 +24,9 @@ spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
 
 # Hibernate ddl auto (create, create-drop, validate, update)
 spring.jpa.hibernate.ddl-auto= update
-
-# App Properties
-auth.app.jwtCookieName= auth
-auth.app.jwtSecret= ======================auth=Spring===========================
-auth.app.jwtExpirationMs= 86400000
 ```
 
-- For PostgreSQL
-```
-spring.datasource.url= jdbc:postgresql://localhost:5432/testdb?useSSL=false
-spring.datasource.username= root
-spring.datasource.password= 123456
-
-spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDialect
-spring.jpa.hibernate.ddl-auto= update
-```
-- For MySQL
+- For MySQL:
 ```
 spring.datasource.url= jdbc:mysql://localhost:3306/testdb?useSSL=false
 spring.datasource.username= root
